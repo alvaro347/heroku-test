@@ -1,5 +1,4 @@
-#!/usr/bin/env python3
-#
+
 # An HTTP server that's a message board.
 
 from http.server import HTTPServer, BaseHTTPRequestHandler
@@ -51,6 +50,7 @@ class MessageHandler(BaseHTTPRequestHandler):
         # Send the form with the messages in it.
         mesg = form.format("\n".join(memory))
         self.wfile.write(mesg.encode())
+
 
 if __name__ == '__main__':
     server_address = ('', 8000)
